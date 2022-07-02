@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './SearchBar.css';
 
 let sortByOptions = {
@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
             <div class="SearchBar">
                 <div className="SearchBar-sort-options">
                 <ul>
-                renderSortByOptions();
+                {this.renderSortByOptions()}
                 </ul>
                 </div>
                 <div className="SearchBar-fields">
