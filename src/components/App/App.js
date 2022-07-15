@@ -22,14 +22,21 @@ let businessArray = [
   business
 ]
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Ravenous</h1>
-      <SearchBar />
-      <BusinessList businesses = {businessArray} />
-    </div>
-  );
+
+class App extends React.Component {
+  searchYelp(term, location, sortBy){
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <h1>Ravenous</h1>
+        <SearchBar searchYelp ={this.searchYelp} />
+        <BusinessList businesses = {businessArray} />
+      </div>
+    );
+  }   
 }
 
 export default App;
